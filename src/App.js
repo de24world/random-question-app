@@ -6,10 +6,14 @@ function App() {
   const getQuestion = () => {
     fetch(" https://type.fit/api/quotes")
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        let randomNum = Math.floor(Math.random() * data.length);
+        setQuestions(data[randomNum]);
+      });
   };
   return (
     <div className="App">
+      {questions.text}
       <button onClick={getQuestion}>Get Question</button>
     </div>
   );
