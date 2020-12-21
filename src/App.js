@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="quote">
+      <div className="question">
         <p>{questions.text}</p>
         <p>{questions.author}</p>
         <div className="btnContainer">
