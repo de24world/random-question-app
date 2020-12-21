@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
-function App() {
+const App = () => {
   const [questions, setQuestions] = useState("");
   const getQuestion = () => {
     fetch(" https://type.fit/api/quotes")
@@ -11,12 +11,27 @@ function App() {
         setQuestions(data[randomNum]);
       });
   };
+
+  useEffect(() => {
+    getQuestion();
+  }, []);
+
   return (
     <div className="App">
-      {questions.text}
-      <button onClick={getQuestion}>Get Question</button>
+      <div className="quote">
+        <p>{questions.text}</p>
+        <p>{questions.author}</p>
+        <div className="btnContainer">
+          <button className="btn" onClick={getQuestion}>
+            Get Question
+          </button>
+          <a href="" className="btn">
+            Tweet
+          </a>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
