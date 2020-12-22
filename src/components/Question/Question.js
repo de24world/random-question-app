@@ -3,29 +3,24 @@ import "./Question.css";
 import data from "../data/question.json";
 
 const Question = () => {
-  // const [questions, setQuestions] = useState("");
+  const [questions, setQuestions] = useState("");
+  const getQuestion = () => {
+    let randomNum = Math.floor(Math.random() * data.length);
+    setQuestions(data[randomNum]);
+  };
 
-  // const getQuestion = () => {
-  //   fetch(" https://type.fit/api/quotes")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       let randomNum = Math.floor(Math.random() * data.length);
-  //       setQuestions(data[randomNum]);
-  //     });
-  // };
+  useEffect(() => {
+    getQuestion();
+  }, []);
 
-  // useEffect(() => {
-  //   getQuestion();
-  // }, []);
+  console.log(data);
 
   return (
     <div>
-      {/* 
-      
-      <div className="App">
+      <div className="Question">
         <div className="question">
-          <p>{questions.text}</p>
-          <p>{questions.author}</p>
+          <p>{questions.text}?</p>
+          <p>Number: {questions.id}/100</p>
           <div className="btnContainer">
             <button className="btn" onClick={getQuestion}>
               Get Question
@@ -35,9 +30,7 @@ const Question = () => {
             </a>
           </div>
         </div>
-      </div> 
-      
-      */}
+      </div>
     </div>
   );
 };
