@@ -18,15 +18,15 @@ const Question = () => {
   return (
     <div>
       <div className="Question">
-        <div className="question">
+        <div className="question" onClick={getQuestion}>
           <p>{questions.text}?</p>
           <p>Number: {questions.id}/100</p>
         </div>
-        <div className="btnContainer">
+        {/* <div className="btnContainer">
           <button className="btn" onClick={getQuestion}>
             Get Question
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
