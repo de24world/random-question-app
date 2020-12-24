@@ -21,14 +21,11 @@ const Question = () => {
         <div className="question">
           <p>{questions.text}?</p>
           <p>Number: {questions.id}/100</p>
-          <div className="btnContainer">
-            <button className="btn" onClick={getQuestion}>
-              Get Question
-            </button>
-            <a href="" className="btn">
-              Tweet
-            </a>
-          </div>
+        </div>
+        <div className="btnContainer">
+          <button className="btn" onClick={getQuestion}>
+            Get Question
+          </button>
         </div>
       </div>
     </div>
