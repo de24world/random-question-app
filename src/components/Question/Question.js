@@ -25,28 +25,19 @@ const Question = () => {
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-      <div>
+      <div className="front">
         This is the front of the card.
-        <button onClick={handleClick}>Click to flip</button>
+        <button onClick={handleClick}>Go to Back</button>
       </div>
 
-      <div>
-        This is the back of the card.
-        <button onClick={handleClick}>Click to flip</button>
+      <div className="back">
+        <p>{questions.text}?</p>
+        <p>Number: {questions.id}/100</p>
+        <button onClick={handleClick}>Go to Front</button>
+        <button className="btn" onClick={getQuestion}>
+          Get Question
+        </button>
       </div>
-      {/* 
-         <div className="Question">
-          <div className="question">
-            <p>{questions.text}?</p>
-            <p>Number: {questions.id}/100</p>
-          </div>
-          <div className="btnContainer">
-            <button className="btn" onClick={getQuestion}>
-              Get Question
-            </button>
-          </div>
-        </div>
-      */}
     </ReactCardFlip>
   );
 };
