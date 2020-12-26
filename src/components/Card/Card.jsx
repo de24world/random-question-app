@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Card.scss";
-
 import data from "../data/question.json";
+
+import { Button } from "antd";
 
 const Card = () => {
   const [questions, setQuestions] = useState("");
@@ -33,9 +34,9 @@ const Card = () => {
             <h1>Back of Card</h1>
             <p>{questions.text}?</p>
             <p>Number: {questions.id}/100</p>
-            <button className="btn" onClick={getQuestion}>
+            <Button type="primary" onClick={getQuestion}>
               Next
-            </button>
+            </Button>
           </div>
         </div>
       </div>
