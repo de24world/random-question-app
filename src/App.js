@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 import AppHeader from "./components/AppHeader/AppHeader";
-import Card from "./components/Card/Card";
+import QuestionCard from "./components/QuestionCard/QuestionCard";
 
 import { Layout } from "antd";
 const { Header } = Layout;
@@ -13,7 +13,7 @@ const App = () => {
       <Header>
         <AppHeader />
       </Header>
-      <Card />
+      <QuestionCard />
     </Layout>
   );
 };

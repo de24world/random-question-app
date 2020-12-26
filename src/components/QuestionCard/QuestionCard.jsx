@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./Card.scss";
+import "./QuestionCard.scss";
 import data from "../data/question.json";
 
 import { Button } from "antd";
 
-const Card = () => {
+const QuestionCard = () => {
   const [questions, setQuestions] = useState("");
 
   const getQuestion = () => {
@@ -44,4 +44,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default QuestionCard;

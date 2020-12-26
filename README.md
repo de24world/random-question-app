@@ -11,3 +11,6 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
 https://codepen.io/ritalbradley/pen/jmGVmQ
 
 https://www.youtube.com/watch?v=OV8MVmtgmoY&ab_channel=ArjunKhara
+
+THE 7-1 PATTERNED STRUCTURE
+https://www.webdesignerdepot.com/2020/12/2-smartest-ways-to-structure-sass/
