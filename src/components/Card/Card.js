@@ -1,11 +1,24 @@
+import React, { useState, useEffect } from "react";
 import "./Card.css";
 
-import React from "react";
+import data from "../data/question.json";
 
 const Card = () => {
+  const [questions, setQuestions] = useState("");
+
+  const getQuestion = () => {
+    let randomNum = Math.floor(Math.random() * data.length);
+    setQuestions(data[randomNum]);
+  };
+
+  useEffect(() => {
+    getQuestion();
+  }, []);
+
+  console.log(data);
+
   return (
     <div>
-      {" "}
       <div class="maincontainer">
         <div class="thecard">
           <div class="thefront">
@@ -18,11 +31,11 @@ const Card = () => {
 
           <div class="theback">
             <h1>Back of Card</h1>
-            <p>
-              Your use of this site is subject to the terms and conditions
-              governing this and all transactions.
-            </p>
-            <button>Submit</button>
+            <p>{questions.text}?</p>
+            <p>Number: {questions.id}/100</p>
+            <button className="btn" onClick={getQuestion}>
+              Next
+            </button>
           </div>
         </div>
       </div>

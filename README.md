@@ -9,3 +9,5 @@ https://www.code-boost.com/react-memory-game/
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
 
 https://codepen.io/ritalbradley/pen/jmGVmQ
+
+https://www.youtube.com/watch?v=OV8MVmtgmoY&ab_channel=ArjunKhara
