@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 
 import Question from "./components/Question/Question";
+import Card from "./components/Card/Card";
 
 const App = () => {
-  return <Question />;
+  return (
+    <>
+      <Card />
+
+      <Question />
+    </>
+  );
 };
 
 export default App;
