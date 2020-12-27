@@ -20,9 +20,9 @@ const QuestionCard = () => {
 
   return (
     <div>
-      <div class="maincontainer">
-        <div class="thecard">
-          <div class="thefront">
+      <div className="maincontainer">
+        <div className="thecard">
+          <div className="thefront">
             <h1>Front of Card</h1>
             <p>
               This is the front of the card. It contains important information.
@@ -30,7 +30,7 @@ const QuestionCard = () => {
             </p>
           </div>
 
-          <div class="theback">
+          <div className="theback">
             <h1>Back of Card</h1>
             <p>{questions.text}?</p>
             <p>Number: {questions.id}/100</p>

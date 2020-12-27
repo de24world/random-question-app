@@ -10,7 +10,7 @@ const { Header, Content, Footer } = Layout;
 
 const App = () => {
   return (
-    <Layout calssName="mainLayout">
+    <Layout className="mainLayout">
       <Header>
         <AppHeader />
       </Header>
